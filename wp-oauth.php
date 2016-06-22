@@ -112,6 +112,9 @@ Class WPOA {
 		'wpoa_battlenet_api_enabled' => 0,								// 0, 1
 		'wpoa_battlenet_api_id' => '',									// any string
 		'wpoa_battlenet_api_secret' => '',
+		'wpoa_shoacc_api_enabled' => 0,								// 0, 1
+		'wpoa_shoacc_api_id' => '',									// any string
+		'wpoa_shoacc_api_secret' => '',
 																		// any string
 		'wpoa_oauth_server_api_enabled' => 0,							// 0, 1
 		'wpoa_oauth_server_api_id' => '',								// any string
@@ -732,6 +735,7 @@ Class WPOA {
 		$html .= $this->wpoa_login_button("paypal", "PayPal", $atts);
 		$html .= $this->wpoa_login_button("instagram", "Instagram", $atts);
 		$html .= $this->wpoa_login_button("battlenet", "Battlenet", $atts);
+		$html .= $this->wpoa_login_button("shoacc", "Shogakukan Account", $atts);
 		$html .= $this->wpoa_login_button( 'oauth_server' , get_option( 'wpoa_oauth_server_api_button_text' ), $atts );
 		if ($html == '') {
 			$html .= 'Sorry, no login providers have been enabled.';
